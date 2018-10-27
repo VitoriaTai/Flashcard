@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Flashcard</string>
+    <string name="how_many_colors_are_in_the_rainbow">How many colors are in the rainbow?</string>
+    <string name="seven_colors">Seven Colors</string>
+    <string name="_7_colors">7 Colors</string>
+    <string name="_6_colors">6 Colors</string>
+    <string name="_5_colors">5 Colors</string>
+    <string name="eyeopen">eyeopen</string>
+    <string name="eyeclosed">eyeclosed</string>
+</resources>
