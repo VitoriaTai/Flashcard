@@ -72,6 +72,10 @@ public class MainActivity extends AppCompatActivity {
         findViewById(R.id.toggle_choices_visibility).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                boolean isShowingAnswers = true;
+                findViewById(R.id.choice_one).setVisibility(View.INVISIBLE);
+                findViewById(R.id.choice_two).setVisibility(View.INVISIBLE);
+                findViewById(R.id.choice_three).setVisibility(View.INVISIBLE);
                 ((ImageView) findViewById(R.id.toggle_choices_visibility)).setImageResource(R.drawable.eyeclosed);
 
             }
