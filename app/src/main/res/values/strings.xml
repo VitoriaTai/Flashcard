@@ -7,4 +7,9 @@
     <string name="_5_colors">5 Colors</string>
     <string name="eyeopen">eyeopen</string>
     <string name="eyeclosed">eyeclosed</string>
+    <string name="plussign">plussign</string>
+    <string name="your_question_here">Your Question Here</string>
+    <string name="your_answer_here">Your Answer Here</string>
+
+
 </resources>
