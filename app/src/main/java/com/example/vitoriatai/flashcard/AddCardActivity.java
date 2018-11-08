@@ -22,20 +22,25 @@ public class AddCardActivity extends AppCompatActivity {
             }
         });
 
+
         findViewById(R.id.saveButton).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
+                ((ImageView) findViewById(R.id.saveButton)).setImageResource(R.drawable.save);
+
                 ((EditText) findViewById(R.id.editText)).getText().toString();
                 ((EditText) findViewById(R.id.editText2)).getText().toString();
-                ((ImageView) findViewById(R.id.saveButton)).setImageResource(R.drawable.save);
+                Intent data = new Intent(AddCardActivity.this, MainActivity.class);
+                data.putExtra("string1", ((EditText) findViewById(R.id.editText)).getText().toString()); // puts one string into the Intent, with the key as 'string1'
+                data.putExtra("string2", ((EditText) findViewById(R.id.editText2)).getText().toString()); // puts another string into the Intent, with the key as 'string2
+                setResult(RESULT_OK, data);
+                finish();
             }
         });
-
-        //Intent data = new Intent(AddCardActivity.this, MainActivity.class);
-        //data.putExtra("question", "editText"); // puts one string into the Intent, with the key as 'string1'
-        //data.putExtra("answer", "editText2"); // puts another string into the Intent, with the key as 'string2
-        //setResult(RESULT_OK, data);
-        //finish();
-
     }
 }
+
+
+
+

@@ -5,6 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -101,16 +102,26 @@ public class MainActivity extends AppCompatActivity {
                 Intent intent = new Intent(MainActivity.this, AddCardActivity.class);
                 MainActivity.this.startActivityForResult(intent, 100);
                 ((ImageView) findViewById(R.id.myButton)).setImageResource(R.drawable.plussign);
+                findViewById(R.id.choice_one).setVisibility(View.INVISIBLE);
+                findViewById(R.id.choice_two).setVisibility(View.INVISIBLE);
+                findViewById(R.id.choice_three).setVisibility(View.INVISIBLE);
             }
         });
 
     }
 
-   // @Override
-    //protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-        //if (requestCode == 100) {
-            //String question = data.getExtras().getString("question");
-            //String answer = data.getExtras().getString("answer");
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
 
+        if (requestCode == 100) {
+            String string1 = data.getExtras().getString("string1");
+            String string2 = data.getExtras().getString("string2");
+            ((TextView) findViewById(R.id.flashcard_question)).setText(string1);
+            ((TextView) findViewById(R.id.flashcard_answer)).setText(string2);
+
+        }
+
+    }
 
 }
+
